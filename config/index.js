@@ -11,6 +11,7 @@ module.exports = {
       encrypt: true,
       trustServerCertificate: process.env.DB_TRUST_CERT === "true",
     },
+    requestTimeout: 1000 * 10, // 10 seconds
   },
   monitor: {
     queryThreshold: process.env.QUERY_THRESHOLD || 5, // Default to 5 minute
