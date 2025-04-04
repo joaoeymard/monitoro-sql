@@ -11,6 +11,7 @@ services:
       - .env
     volumes:
       - .:/app
+      - /app/node_modules # Ignora a pasta node_modules no container
     restart: unless-stopped # Reinicia o container a menos que seja parado manualmente
     deploy:
       resources:
